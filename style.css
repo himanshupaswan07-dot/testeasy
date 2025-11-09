@@ -10,6 +10,7 @@ body {
   color: #333;
 }
 
+/* HEADER */
 header {
   width: 100%;
   display: flex;
@@ -31,22 +32,37 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
 }
 
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #007bff;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
+.hamburger.active i {
+  transform: rotate(90deg);
+}
+
+/* HERO */
 .hero {
   background: linear-gradient(to right, #007bff, #00c6ff);
   color: white;
@@ -78,7 +94,8 @@ header {
   background: #e6e6e6;
 }
 
-.about, .features, .contact {
+/* ABOUT / FEATURES / CONTACT */
+.about, .features, .contact, .book {
   padding: 80px 20px;
   text-align: center;
 }
@@ -88,6 +105,7 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* FEATURES */
 .feature-grid {
   display: flex;
   flex-wrap: wrap;
@@ -109,59 +127,8 @@ h2 {
   margin-bottom: 10px;
 }
 
-footer {
-  background: #007bff;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer .socials a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 25px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 60px;
-    right: 40px;
-    width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
+/* BOOK TEST FORM */
 .book {
-  padding: 80px 20px;
-  text-align: center;
   background: #f0f7ff;
 }
 
@@ -193,4 +160,66 @@ footer .socials a {
 
 .book button:hover {
   background: #005dc1;
+}
+
+/* FOOTER */
+footer {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .socials a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* WHATSAPP FLOATING ICON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
