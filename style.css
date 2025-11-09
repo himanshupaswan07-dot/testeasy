@@ -159,3 +159,38 @@ footer .socials a {
     display: block;
   }
 }
+.book {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f0f7ff;
+}
+
+.book form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.book input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.book button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.book button:hover {
+  background: #005dc1;
+}
