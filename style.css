@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8faff;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.hero {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: white;
+  color: #007bff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e6e6e6;
+}
+
+.about, .features, .contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .socials a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
